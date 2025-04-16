@@ -1,23 +1,23 @@
 body {
     margin: 0;
     padding: 0;
-    display: flex;
+    display: flex;           
     justify-content: center; 
-    align-items: center;    
-    height: 100vh;          
+    align-items: center;     
+    min-height: 100vh;       
     background: #ffffff url("../img/background.jpg") no-repeat;
     background-size: cover;
-    
 }
 
 .menu_container {
     width: 720px;
     height: 520px;
     background-color: #7e4f4f;
-    padding: 20px;            
-    border-radius: 10px;      
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-    text-align: center;      
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-right: 20px; 
 }
 
 .menu_title {
@@ -25,8 +25,6 @@ body {
     color: #ffefef;        
     margin-bottom: 20px;    
 }
-
-
 
 .menu_buttons {
     display: flex;           
@@ -80,3 +78,39 @@ body {
     color: #000000;           
     margin-top: 40px;         
 }
+
+footer {
+    width: 330px;            
+    height: auto;            
+    background-color: #7e4f4f;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    gap: 20px;
+}
+
+.footer image{
+    display: block;
+    margin: 20px auto 0;
+    max-width: 100%;
+    height: auto;
+}
+
+.footer-image {
+    display: block;          
+    margin: 20px auto;       
+    max-width: 100%;         
+    height: auto;            
+    border: 2px solid #ccc;  
+    border-radius: 10px;     
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.footer-image:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); 
+}
+
+
