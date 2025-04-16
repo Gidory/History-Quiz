@@ -5,7 +5,7 @@ body {
     justify-content: center; 
     align-items: center;     
     min-height: 100vh;       
-    background: #ffffff url("../img/background.jpg") no-repeat;
+    background: #ffffff url("../img/giphy.gif") no-repeat;
     background-size: cover;
 }
 
@@ -17,7 +17,13 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
-    margin-right: 20px; 
+    margin-right: 20px;
+    opacity: 0.3; 
+    transition: opacity 0.3s ease; 
+}
+
+.menu_container:hover {
+    opacity: 1; 
 }
 
 .menu_title {
@@ -88,6 +94,11 @@ footer {
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     gap: 20px;
+    opacity: 0.3;
+    transition: opacity 0.3s ease;
+}
+footer:hover {
+    opacity: 1; 
 }
 
 .footer image{
@@ -110,7 +121,5 @@ footer {
 
 .footer-image:hover {
     transform: scale(1.1); 
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
-
-
