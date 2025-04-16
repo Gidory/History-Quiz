@@ -1,0 +1,39 @@
+body{
+    background-color: lightgrey;
+    display: flex;
+    justify-content: center;
+}
+.top-bar {
+    position: fixed;
+    top: 0;
+    width: 98%;
+    height: 40px;
+    background-color: #3c4a58;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    right: 0px;
+    padding: 0 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+  
+.progress {
+    font-weight: bold;
+}
+  
+.icon {
+    font-size: 18px;
+}
+  
+.username {
+    font-style: italic;
+}
+#testholder{
+    position: absolute;
+    top: 6%;
+    width: 98vw;
+    height: 92vh;
+    background-color: blue;
+}
