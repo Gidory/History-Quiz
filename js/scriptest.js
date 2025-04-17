@@ -11,6 +11,12 @@ let rumki = 0;
 let testnumber = 0;
 //В синіх тегах писати, питання і відповіді. Залежачи від масиву. Пурпурні(рожевих.. не знаю фіолетових), це складова номера
 // тесту. Жовтий це сам масив(увесь).
+fetch('json/arrayOfQuestions_and_Answers.json')
+.then(response => response.json())
+.then(data => {
+
+});
+
 let Questions = [
 [  "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th", "10th", "test"], ["1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th", "10th"], ["1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th", "10th"], ["1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th", "10th"]
 ];
