@@ -2,6 +2,7 @@ body{
     background-color: lightgrey;
     display: flex;
     justify-content: center;
+    user-select: none;
 }
 .top-bar {
     position: fixed;
