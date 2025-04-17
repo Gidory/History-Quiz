@@ -10,7 +10,7 @@ body{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 120vh;
     background-color: #f4f4f9;
 }
 
@@ -58,6 +58,9 @@ body{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 60%;
     max-width: 800px;
+    height: 200px;
+    margin: 0 auto;
+    position: relative; 
 }
 
 .result {
@@ -102,4 +105,14 @@ body{
     font-size: 23px;
 }
 
+
+.buttons {
+    position: absolute; 
+    bottom: 10px; 
+    right: 10px; 
+    display: flex;
+    justify-content: flex-end;
+    color: #000000;
+    font-size: 18px;
+}
 
