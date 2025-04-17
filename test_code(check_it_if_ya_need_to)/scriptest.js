@@ -46,6 +46,7 @@ function handleAnswerClick(answerText) {
     } else {
       console.log("incorrect");
     }
+    questionnum++;
   }
   
   // Event listeners
