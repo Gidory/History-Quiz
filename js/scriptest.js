@@ -8,7 +8,6 @@ let question = document.querySelector("#question");
 let questnum = document.querySelector("#Vopros");
 let testholder = document.querySelector("#testholder");
 let questionnum = 0;
-let rumki = 0;
 let testnumber = localStorage.getItem('testnumbers');
 let TetsInProgress;
 let Questions = [];
@@ -77,6 +76,8 @@ function handleAnswerClick(answerText) {
       console.log("The END!")
       testholder.style.display="none";
       clearInterval(TetsInProgress);
+      window.location.href = 'results.html';
+      localStorage.setItem('rumki', 0);
     }
   }
   
