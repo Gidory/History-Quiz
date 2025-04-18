@@ -42,6 +42,7 @@ body{
 #testholder{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 .question{
     width: 98%;
@@ -58,7 +59,7 @@ body{
     overflow: hidden; 
 }
 .neobj{
-    margin: 10px;
+    margin: 5px;
 }
 .variants{
     width: 23.5%;

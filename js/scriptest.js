@@ -7,8 +7,20 @@ let answ4 = document.querySelector("#answer4");
 let question = document.querySelector("#question");
 let questnum = document.querySelector("#Vopros");
 let testholder = document.querySelector("#testholder");
-let questionnum = 0;
-let testnumber = localStorage.getItem('testnumbers');
+let questionnum = parseInt(localStorage.getItem('questium'));
+let testnumber = parseInt(localStorage.getItem('testnumbers'));
+let TestInProgressity = true;
+if (!questionnum){
+  questionnum = 0;
+}
+if (!testnumber){
+  testnumber = 0;
+  alert("test is stopped due to the bug");
+}
+let rumki = parseInt(localStorage.getItem('rumki'));
+if (!rumki){
+  rumki = 0;
+}
 let TetsInProgress;
 let Questions = [];
   let Answers = [];
@@ -77,7 +89,13 @@ function handleAnswerClick(answerText) {
       testholder.style.display="none";
       clearInterval(TetsInProgress);
       window.location.href = 'results.html';
-      localStorage.setItem('rumki', 0);
+      localStorage.setItem('rumki', rumki);
+      localStorage.setItem('questium', 0);
+      TestInProgressity = false;
+    }
+    if(TestInProgressity == true){
+      localStorage.setItem('questium', questionnum);
+      localStorage.setItem('rumki', rumki);
     }
   }
   
