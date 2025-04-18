@@ -3,12 +3,16 @@
     padding: 0;
 }
 body {
+    margin: 0;
+    padding: 0;      
     font-family: 'Arial', sans-serif;
-    background: url(../img/Info_bg.png) no-repeat center center fixed;
-    background-size: cover;
     color: #fff;
     font-size: 16px;
     user-select: none;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(26,14,1,1) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
 }
 
 a {
@@ -20,14 +24,15 @@ img {
 }
 
 header {
-    padding: 50px 0;
+    padding: 40px 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 header .header_logo {
     text-transform: uppercase;
     font-size: 18px;
     font-weight: 800;
-    color: black;
+    color: #fff;
 }
 
 header nav ul {
@@ -40,7 +45,7 @@ header nav ul {
     width: 50%;
     left: 50%;
     transform: translateX(-50%);
-    margin: 0 auto;
+    margin: 15px 0 0 0;
     padding: 10px 20px;
 }
 
@@ -50,6 +55,110 @@ header nav ul li {
 
 header nav ul li a {
     font-weight: 400;
-    color: black
+    color: #fff;;
 }
 
+header nav ul li.active::after{
+    content: "";
+    display: block;
+    width: 90px;
+    height: 5px;
+    background: #dc7000;
+    border-radius: 10px;
+    position: relative;
+    top: 5px;
+    left: -15px;
+}
+
+header img {
+    position: absolute;
+    top: 0;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 40px;
+    height: 40px;
+}
+
+header .header_logo {
+    position: absolute;
+    top: 0;
+    margin-top: 28px;
+    margin-left: 80px;
+    width: 50px;
+    color: #fff;
+}
+
+header .cat{
+    position: absolute;
+    top: 0;
+    right: 40px;
+    margin-top: 17px;
+    width: 100px;
+    color: #fff;
+    background-color: #dc7000;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 500ms ease;
+}
+
+header .cat:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.hero_container {
+    margin-left: 150px;
+    margin-top: 150px;
+}
+
+
+.hero–info {
+    width: 527px;
+    padding-top:70px;
+}
+
+.hero––info h2 {
+    color: #e87d0e;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.hero––info h1 {
+    font-size: 50px;
+    font-weight: 600;
+    width: 50%;
+}
+
+.hero––info p {
+    font-weight: 500;
+    line-height: 170%;
+    margin: 30px 0;
+    width: 900px;
+}
+
+.hero––info .btn {
+    background: #fa8305;
+    color: #fff;
+    border-radius: 50px;
+    padding: 15px 30px;
+    border: 0;
+    transition: all 500ms ease;
+    font-size: 18px;
+}
+
+.hero––info .btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.hero––info .btn:first-child {
+    margin-right: 40px;
+}
+
+.hero img {
+    position: absolute;
+    top: -50px;
+    right: 0;
+}
