@@ -109,8 +109,8 @@ header .cat:hover{
 }
 
 .hero_container {
-    margin-left: 150px;
-    margin-top: 150px;
+    margin-left: 10%;
+    margin-top: 10%;
 }
 
 
@@ -138,7 +138,17 @@ header .cat:hover{
     width: 900px;
 }
 
-.hero––info .btn {
+.btn_1, .btn_2 {
+    display: inline-block;
+    margin-right: 40px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    transition: all 500ms ease;
+}
+
+.hero––info .btn_1, .btn_2 {
     background: #fa8305;
     color: #fff;
     border-radius: 50px;
@@ -148,13 +158,14 @@ header .cat:hover{
     font-size: 18px;
 }
 
-.hero––info .btn:hover {
+.hero––info .btn_1:hover {
     cursor: pointer;
     transform: scale(1.1);
 }
 
-.hero––info .btn:first-child {
-    margin-right: 40px;
+.hero––info .btn_2:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 .hero img {
