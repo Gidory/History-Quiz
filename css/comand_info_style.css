@@ -177,6 +177,10 @@ header .cat:hover{
     width: 800px;
 }
 
+.description {
+font-size: 20px;
+}
+
 .Romanka .sosial_media { 
     position: absolute; 
     margin-left: 22%;
