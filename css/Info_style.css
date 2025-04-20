@@ -1,120 +1,267 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 body {
     margin: 0;
     padding: 0;      
-    background: #ffffff url("../img/background.jpg") no-repeat;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    font-size: 16px;
+    user-select: none;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(26,14,1,1) 100%);
+    background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     height: 100vh;
-    position: relative;
 }
 
-.zagolovok {
-    font-size: 60px;        
-    color: #ffefef;
-    text-align: center;
-    margin-top: 80px;
-    background-color: #7e4f4f;
-    padding: 20px;
-    border-radius: 20px;
-}
-
-.button-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-    gap: 120px; /* Збільшено відстань між кнопками */
-}
-
-.button {
-    position: relative;
-    width: 300px;
-    height: 200px;
-    perspective: 1000px; /* створює 3D-простір */
-}
-
-.button-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s ease;
-    transform-style: preserve-3d;
-}
-
-.button:hover .button-inner {
-    transform: rotateY(180deg);
-}
-
-.button-front,
-.button-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden; /* ключ до "flip" */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    padding: 20px;
-    font-size: 20px;
-    color: #ffffff;
-    transition: transform 0.6s ease, background-color 0.6s ease;
-}
-
-.button-front {
-    background-color: #7a6767;
-}
-
-.button-back {
-    background-color: #5a4a4a;
-    transform: rotateY(180deg);
-}
-
-.button a {
-    color: #ffffff;
+a {
     text-decoration: none;
-    margin-bottom: 10px;
-    font-size: 30px;
 }
 
-.button-image {
-    width: 80px;
-    height: auto;
-    margin-top: 10px;
+img {
+    max-width: 100%;
 }
 
-.menu {
+header {
+    padding: 40px 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+header .header_logo {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 800;
+    color: #fff;
+}
+
+header nav ul {
     list-style: none;
-    background-color: antiquewhite; 
-    padding: 20px;
-    border-radius: 10px;   
-}
-
-.photo-container {
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    padding: 40px;
+    align-items: center;
     position: absolute;
-    top: 60%;
-    transform: translateY(-50%);
-    z-index: -1; 
+    top: 0;
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 15px 0 0 0;
+    padding: 10px 20px;
 }
 
-.left-column,
-.right-column {
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    font-weight: 400;
+    color: #fff;;
+}
+
+header nav ul li.active::after{
+    content: "";
+    display: block;
+    width: 90px;
+    height: 5px;
+    background: #dc7000;
+    border-radius: 10px;
+    position: relative;
+    top: 5px;
+    left: -15px;
+}
+
+header img {
+    position: absolute;
+    top: 0;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 40px;
+    height: 40px;
+}
+
+header .header_logo {
+    position: absolute;
+    top: 0;
+    margin-top: 28px;
+    margin-left: 80px;
+    width: 50px;
+    color: #fff;
+}
+
+header .cat{
+    position: absolute;
+    top: 0;
+    right: 40px;
+    margin-top: 17px;
+    width: 100px;
+    color: #fff;
+    background-color: #dc7000;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 500ms ease;
+}
+
+header .cat:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.hero_container {
+    margin-left: 10%;
+    margin-top: 10%;
+}
+
+
+.hero–info {
+    width: 527px;
+    padding-top:70px;
+}
+
+.hero––info h2 {
+    color: #e87d0e;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.hero––info h1 {
+    font-size: 50px;
+    font-weight: 600;
+    width: 50%;
+}
+
+.hero––info p {
+    font-weight: 500;
+    line-height: 170%;
+    margin: 30px 0;
+    width: 900px;
+}
+
+.btn_1, .btn_2 {
+    display: inline-block;
+    margin-right: 40px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    transition: all 500ms ease;
+}
+
+.hero––info .btn_1, .btn_2 {
+    background: #fa8305;
+    color: #fff;
+    border-radius: 50px;
+    padding: 15px 30px;
+    border: 0;
+    transition: all 500ms ease;
+    font-size: 18px;
+}
+
+.hero––info .btn_1:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.hero––info .btn_2:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.hero_container video {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 10%;
+    margin-top: 170px;
+    width: 700px;
+    height: 600px;
+    border-radius: 20px;
+    background-color: #4a2c2a;
+    padding: 15px;
+}
+
+footer {
+    margin-top: 10%;
+    border-top: 2px solid rgba(255, 255, 255, 0.5); 
+    padding-top: 20px;
+}
+
+footer h2 {
+    font-size: 35px;
+    font-style: uppercase;
+    font-weight: 800;
+    color: #fff;
+    text-align: center;
+    background-color: #4a2c2a;
+    padding: 15px;
+}
+
+footer .information {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 0 10%;
+}
+
+footer .information img{
+    width: 100px;
+    height: 100px;
+}
+
+footer .inf1 {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    margin: 100px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+    width: 250px;
+}
+footer .inf2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+}
+footer .inf3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.photo-container img {
-    width: 200px;
-    height: 250px;
-    border-radius: 20px;
+footer .inf2 h3 {
+    width: 300px;
+}
+
+footer .inf3 h3 {
+    width: 600px;
+}
+
+footer .inf3 p {
+    width: 450px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+footer .inf1 p {
+    width: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+
+footer .inf2 p {
+    width: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+
+footer .information h3 {
+    text-align: justify; /* Вирівнювання тексту по ширині */
+    margin: 0 auto; /* Центрування тексту, якщо потрібно */
+    font-size: 18px; /* Оптимальний розмір шрифту */
 }

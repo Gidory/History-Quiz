@@ -3,6 +3,7 @@ body{
     font-family: 'Times New Roman', Times, serif;
     flex-direction: column;
     justify-content: center;
+    user-select: none;
 }
 
 .menu_container {

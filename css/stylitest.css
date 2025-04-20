@@ -1,0 +1,95 @@
+body{
+    background-color: lightgrey;
+    display: flex;
+    justify-content: center;
+    user-select: none;
+}
+.top-bar {
+    position: fixed;
+    top: 0;
+    width: 98%;
+    height: 40px;
+    background-color: #3c4a58;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    right: 0px;
+    padding: 0 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+  
+.progress {
+    font-weight: bold;
+}
+  
+.icon {
+    font-size: 18px;
+}
+  
+.username {
+    font-style: italic;
+}
+#testholder{
+    position: absolute;
+    top: 6%;
+    width: 98vw;
+    height: 92vh;
+    background-color: rgb(177, 169, 169);
+    border-radius: 10px;
+}
+#testholder{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.question{
+    width: 98%;
+    background-color: aquamarine;
+    border-radius: 10px;
+    height: 40%;
+    background-color: rgb(223, 217, 217);
+    font-size: 50px;
+    display: flex;
+    justify-content: center;   /* Горизонтальне центрування */
+    align-items: center;       /* Вертикальне центрування */
+    text-align: center;        /* Текст по центру всередині рядка */
+    word-break: break-word;    /* Переносити слова при потребі */
+    overflow: hidden; 
+}
+.neobj{
+    margin: 5px;
+}
+.variants{
+    width: 23.5%;
+    height: 50%;
+    border-radius: 10px;
+    transition-duration: 1s;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;   /* Горизонтальне центрування */
+    align-items: center;       /* Вертикальне центрування */
+    text-align: center;        /* Текст по центру всередині рядка */
+    word-break: break-word;    /* Переносити слова при потребі */
+    overflow: hidden; 
+}
+.variants:hover{
+    scale: 1.05;
+}
+.variants:active{
+    border: 2px solid black;
+}
+#answer1{
+    background-color: lightcoral;
+}
+#answer2{
+    background-color: lightyellow;
+}
+#answer3{
+    background-color: lightblue;
+}
+#answer4{
+    background-color: lightgreen;
+}
