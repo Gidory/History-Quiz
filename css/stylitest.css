@@ -43,10 +43,10 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
 }
 .question{
     width: 98%;
-    background-color: aquamarine;
     border-radius: 10px;
     height: 40%;
     background-color: rgb(223, 217, 217);
@@ -57,6 +57,32 @@ body{
     text-align: center;        /* Текст по центру всередині рядка */
     word-break: break-word;    /* Переносити слова при потребі */
     overflow: hidden; 
+}
+#question1{
+    width: 98%;
+    border-radius: 10px;
+    height: 20%;
+    background-color: rgb(223, 217, 217);
+    font-size: 50px;
+    display: flex;
+    justify-content: center;   /* Горизонтальне центрування */
+    align-items: center;       /* Вертикальне центрування */
+    text-align: center;        /* Текст по центру всередині рядка */
+    word-break: break-word;    /* Переносити слова при потребі */
+    overflow: hidden;
+}
+#testholder1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#testholder1{
+    position: absolute;
+    top: 6%;
+    width: 98vw;
+    height: 96vh;
+    background-color: rgb(177, 169, 169);
+    border-radius: 10px;
 }
 .neobj{
     margin: 5px;
@@ -75,6 +101,28 @@ body{
     word-break: break-word;    /* Переносити слова при потребі */
     overflow: hidden; 
 }
+.variants1{
+    position: absolute;
+    width: 25%;
+    height: 18%;
+    margin-left: 10%;
+    border-radius: 10px;
+    transition-duration: 1s;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;   /* Горизонтальне центрування */
+    align-items: center;       /* Вертикальне центрування */
+    text-align: center;        /* Текст по центру всередині рядка */
+    word-break: break-word;    /* Переносити слова при потребі */
+    overflow: hidden; 
+}
+.variants1:hover{
+    scale: 1.05;
+}
+.variants1:active{
+    border: 2px solid black;
+}
 .variants:hover{
     scale: 1.05;
 }
@@ -92,4 +140,97 @@ body{
 }
 #answer4{
     background-color: lightgreen;
+}
+#answer12{
+    background-color: lightcoral;
+    top: 20%;
+}
+#answer22{
+    background-color: lightyellow;
+    top: 40.5%;
+}
+#answer32{
+    background-color: lightblue;
+    top: 60%;
+}
+#answer42{
+    background-color: lightgreen;
+    top: 80%;
+}
+#answer123{
+    background-color: lightcoral;
+    top: 20%;
+}
+#answer223{
+    background-color: lightyellow;
+    top: 40.5%;
+}
+#answer323{
+    background-color: lightblue;
+    top: 60%;
+}
+#answer423{
+    background-color: lightgreen;
+    top: 80%;
+}
+#collection{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: none;
+}
+.variants2{
+    position: absolute;
+    width: 25%;
+    height: 18%;
+    left: 60%;
+    border-radius: 10px;
+    transition-duration: 1s;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;   /* Горизонтальне центрування */
+    align-items: center;       /* Вертикальне центрування */
+    text-align: center;        /* Текст по центру всередині рядка */
+    word-break: break-word;    /* Переносити слова при потребі */
+    overflow: hidden; 
+}
+.variants2:hover{
+    scale: 1.05;
+}
+.variants2:active{
+    border: 2px solid black;
+}
+#svg-lines {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* важливо */
+    z-index: 1000; /* поверх всіх інших блоків */
+  }
+.txt{
+    background-color: #ddd;
+    border: 3px solid #aaa;
+    color: #777;
+    font-size:20px;
+    font-family: Arial Bold;
+    padding: 0 15px 5px 15px;
+    position: absolute;
+    top: 93%;
+    user-select: none;
+    cursor: pointer;
+    left: 90%;
+    transition-duration: 0.5s;
+}
+.txt:hover{
+    background-color: rgb(183, 247, 20);
+    border: 3px solid rgb(183, 247, 20);
+    box-shadow: 0 0 10px rgba(0, 5, 2, 0.5), 0 0 20px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 0, 0, 0.5);
+    scale: 1.1;
+}
+#ITC{
+    display: none;
 }

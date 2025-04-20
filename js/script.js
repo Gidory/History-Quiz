@@ -3,7 +3,7 @@ let rumkis = localStorage.getItem('rumki');
 console.log(rumkis);
 let sr = document.querySelector("#showresult");
 function importi(){
-    sr.innerText = "Ваш результат: " + rumkis + "/10";
+    sr.innerText = "Ваш результат: " + rumkis + "/11";
 }
 importi();
 let rm = document.querySelector('#resultcomm');
@@ -17,7 +17,7 @@ function commenting(){
     if(rumkis > 6&&rumkis <=9){
         rm.innerText = "Чудова робота!"
     }
-    if(rumkis > 9&&rumkis == 10){
+    if(rumkis > 9){
         rm.innerText = "Ідеально."
     }
 }
