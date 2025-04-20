@@ -12,7 +12,6 @@ body {
     background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(26,14,1,1) 100%);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 105vh;
 }
 
 a {
@@ -61,7 +60,7 @@ header nav ul li a {
 header nav ul li.active::after{
     content: "";
     display: block;
-    width: 90px;
+    width: 160px;
     height: 5px;
     background: #dc7000;
     border-radius: 10px;
@@ -108,77 +107,173 @@ header .cat:hover{
     cursor: pointer;
 }
 
-.hero_container {
-    margin-left: 10%;
-    margin-top: 10%;
+.our_info{
+    margin-left: 8%;
+    margin-top: 5%;
 }
 
-
-.hero–info {
-    width: 527px;
-    padding-top:70px;
+.our_info > div {
+    margin-bottom: 40px;
 }
 
-.hero––info h2 {
-    color: #e87d0e;
-    font-size: 20px;
-    font-weight: 600;
+.photoArtema{
+    width: 300px;
+    height: 400px;
 }
 
-.hero––info h1 {
-    font-size: 50px;
-    font-weight: 600;
-    width: 50%;
-}
-
-.hero––info p {
-    font-weight: 500;
-    line-height: 170%;
-    margin: 30px 0;
-    width: 900px;
-}
-
-.btn_1, .btn_2 {
-    display: inline-block;
-    margin-right: 40px;
-    text-align: center;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 18px;
-    transition: all 500ms ease;
-}
-
-.hero––info .btn_1, .btn_2 {
-    background: #fa8305;
-    color: #fff;
-    border-radius: 50px;
-    padding: 15px 30px;
-    border: 0;
-    transition: all 500ms ease;
-    font-size: 18px;
-}
-
-.hero––info .btn_1:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-}
-
-.hero––info .btn_2:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-}
-
-.hero_container video {
+.Artomka h2{
     position: absolute;
-    top: 0;
-    right: 0;
-    margin-right: 10%;
-    margin-top: 170px;
-    width: 700px;
-    height: 600px;
-    border-radius: 20px;
-    background-color: #4a2c2a;
-    padding: 15px;
+    margin-left: 22%;
+    margin-top: 2%;
+    font-size: 40px;
+    font-weight: 800;
+    font: uppercase;
+}
+
+.Artomka p{
+    position: absolute;
+    margin-left: 22%;
+    margin-top: 8%;
+    width: 800px;
+}
+
+.sosial_media { 
+    position: absolute; 
+    margin-left: 22%;
+    margin-top: 12%;
+    display: flex;
+    gap: 20px;
+}
+
+.sosial_media img {
+    width: 50px; 
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.sosial_media img:hover {
+    transform: scale(1.2); 
+    cursor: pointer;
+}
+
+.photoRoman {
+    width: 300px;
+    height: 400px;
+}
+
+.Romanka h2 {
+    position: absolute;
+    margin-left: 22%;
+    margin-top: 2%;
+    font-size: 40px;
+    font-weight: 800;
+    text-transform: uppercase; /* Виправлено на коректний синтаксис */
+}
+
+.Romanka p {
+    position: absolute;
+    margin-left: 22%;
+    margin-top: 8%;
+    width: 800px;
+}
+
+.Romanka .sosial_media { 
+    position: absolute; 
+    margin-left: 22%;
+    margin-top: 12%;
+    display: flex;
+    gap: 20px;
+}
+
+.Romanka .sosial_media img {
+    width: 50px; 
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.Romanka .sosial_media img:hover {
+    transform: scale(1.2); 
+    cursor: pointer;
+}
+
+.photoGleb {
+    width: 300px;
+    height: 400px;
+}
+
+.Glebka h2 {
+    position: absolute;
+    margin-left: 22%;
+    margin-top: 2%;
+    font-size: 40px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.Glebka p {
+    position: absolute;
+    margin-left: 22%;
+    margin-top: 8%;
+    width: 800px;
+}
+
+.Glebka .sosial_media { 
+    position: absolute; 
+    margin-left: 22%;
+    margin-top: 12%;
+    display: flex;
+    gap: 20px;
+}
+
+.Glebka .sosial_media img {
+    width: 50px; 
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.Glebka .sosial_media img:hover {
+    transform: scale(1.2); 
+    cursor: pointer;
+}
+
+.photoDasha {
+    width: 300px;
+    height: 400px;
+}
+
+.Dashka h2 {
+    position: absolute;
+    margin-left: 22%;
+    margin-top: 2%;
+    font-size: 40px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.Dashka p {
+    position: absolute;
+    margin-left: 22%;
+    margin-top: 8%;
+    width: 800px;
+}
+
+.Dashka .sosial_media { 
+    position: absolute; 
+    margin-left: 22%;
+    margin-top: 12%;
+    display: flex;
+    gap: 20px;
+}
+
+.Dashka .sosial_media img {
+    width: 50px; 
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.Dashka .sosial_media img:hover {
+    transform: scale(1.2); 
+    cursor: pointer;
 }
 
 footer {
@@ -261,7 +356,7 @@ footer .inf2 p {
 }
 
 footer .information h3 {
-    text-align: justify; /* Вирівнювання тексту по ширині */
-    margin: 0 auto; /* Центрування тексту, якщо потрібно */
-    font-size: 18px; /* Оптимальний розмір шрифту */
+    text-align: justify; 
+    margin: 0 auto; 
+    font-size: 18px;
 }
