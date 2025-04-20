@@ -8,11 +8,14 @@ body {
     background: #ffffff url("../img/giphy.gif") no-repeat;
     background-size: cover;
     user-select: none;
+    font-size: 20px; 
+    line-height: 1.6; 
 }
 
+
 .menu_container {
-    width: 720px;
-    height: 520px;
+    width: 780px;
+    height: 580px;
     background-color: #7e4f4f;
     padding: 20px;
     border-radius: 10px;
@@ -21,6 +24,7 @@ body {
     margin-right: 20px;
     opacity: 0.3; 
     transition: opacity 0.3s ease; 
+    
 }
 
 .menu_container:hover {
