@@ -12,7 +12,6 @@ body {
     background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(26,14,1,1) 100%);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 105vh;
 }
 
 a {
@@ -117,6 +116,10 @@ header .cat:hover{
 .hero–info {
     width: 527px;
     padding-top:70px;
+    display: flex;
+    flex-direction: column; /* Розташування кнопок вертикально */
+    align-items: center; /* Вирівнювання по центру */
+    gap: 20px; /* Відступ між кнопками */
 }
 
 .hero––info h2 {
@@ -146,17 +149,24 @@ header .cat:hover{
     font-weight: 600;
     font-size: 18px;
     transition: all 500ms ease;
+    width: auto; /* Кнопки будуть мати автоматичну ширину */
+    padding: 15px 30px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    transition: all 500ms ease;
 }
 
 .hero––info .btn_1, .btn_2 {
     background: #fa8305;
     color: #fff;
     border-radius: 50px;
-    padding: 15px 30px;
+    padding: 25px;
     border: 0;
     transition: all 500ms ease;
     font-size: 18px;
 }
+
 
 .hero––info .btn_1:hover {
     cursor: pointer;
@@ -172,17 +182,17 @@ header .cat:hover{
     position: absolute;
     top: 0;
     right: 0;
-    margin-right: 10%;
-    margin-top: 170px;
-    width: 700px;
-    height: 600px;
+    margin-right: 5%;
+    margin-top: 15%;
+    width: 400px;
+    height: 300px;
     border-radius: 20px;
     background-color: #4a2c2a;
     padding: 15px;
 }
 
 footer {
-    margin-top: 10%;
+    margin-top: 15%;
     border-top: 2px solid rgba(255, 255, 255, 0.5); 
     padding-top: 20px;
 }
@@ -215,7 +225,6 @@ footer .inf1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-left: 30px;
     width: 250px;
 }
 footer .inf2 {
