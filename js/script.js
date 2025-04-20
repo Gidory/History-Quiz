@@ -9,7 +9,7 @@ importi();
 let rm = document.querySelector('#resultcomm');
 function commenting(){
     if(rumkis <=3){
-        rm.innerText = "Ну ти просто ЛОХ. Я не знаю навіть, що сказати, майже нічого не знаєте."
+        rm.innerText = "Ну ти просто ..., Я не знаю навіть, що сказати, майже нічого не знаєте."
     }
     if(rumkis > 3&&rumkis <=6){
         rm.innerText = "Щось знаєте, щось не знаєте. Раджу пошукати в Інтернеті відповіді на питання. Якщо ви їх ще пам'ятаєте звісно."
