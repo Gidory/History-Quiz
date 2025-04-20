@@ -261,7 +261,7 @@ footer .inf2 p {
 }
 
 footer .information h3 {
-    text-align: justify; /* Вирівнювання тексту по ширині */
-    margin: 0 auto; /* Центрування тексту, якщо потрібно */
-    font-size: 18px; /* Оптимальний розмір шрифту */
+    text-align: justify; 
+    margin: 0 auto; 
+    font-size: 18px; 
 }
