@@ -53,11 +53,6 @@ header nav ul li {
     display: inline-block;
 }
 
-header nav ul li a {
-    font-weight: 400;
-    color: #fff;;
-}
-
 header nav ul li.active::after{
     content: "";
     display: block;
@@ -69,7 +64,6 @@ header nav ul li.active::after{
     top: 5px;
     left: -15px;
 }
-
 header img {
     position: absolute;
     top: 0;
@@ -258,10 +252,4 @@ footer .inf2 p {
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left: 50px;
-}
-
-footer .information h3 {
-    text-align: justify; 
-    margin: 0 auto; 
-    font-size: 18px; 
 }
