@@ -15,7 +15,7 @@ body {
 
 .menu_container {
     width: 780px;
-    height: 580px;
+    height: 60vh;
     background-color: #7e4f4f;
     padding: 20px;
     border-radius: 10px;
@@ -84,14 +84,14 @@ body {
     padding: 20px;            
     border-radius: 10px;      
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    font-size: 18px;          
+    font-size: 26px;          
     line-height: 1.6;         
     color: #000000;           
     margin-top: 40px;         
 }
 
 footer {
-    width: 330px;            
+    width: 380px;            
     height: auto;            
     background-color: #7e4f4f;
     color: #ffffff;
