@@ -20,8 +20,10 @@ let testholder1 = document.querySelector("#testholder1");
 let questionnum = parseInt(localStorage.getItem('questium'));
 let testnumber = parseInt(localStorage.getItem('testnumbers'));
 let itctv = document.querySelector("#ITC");
+let SA = [];
 let AC = [];
 let counter1 = 0;
+let counter2 = 0;
 let FstAnswer;
 let SndAnswer;
 let TestInProgressity = true;
@@ -114,7 +116,6 @@ function DOIT(i, b, c){
     const correctAnswer = c[a];
     console.log(correctAnswer);
     for (let index = 0; index < correctAnswer.length; index++) {
-      // Перевіряємо, чи є елемент в correctAnswer, який співпадає з CTCA
       if (CTCA.includes(correctAnswer[index])) {
         rumki += 0.25;
         console.log("FOUND DA CORRECT");
@@ -122,6 +123,8 @@ function DOIT(i, b, c){
         console.log("DIDN'T FIND DA CORRECT IDIOTO");
       }
     }
+    SA.push(CTCA);
+    localStorage.setItem("SAs", JSON.stringify(SA));
     questionnum++;
     console.log(rumki);
     if(TestInProgressity == true){
@@ -132,6 +135,7 @@ function DOIT(i, b, c){
 function handleAnswerClick(answerText) {
     const correctAnswer = Correct[questionnum+(11*testnumber)];
     console.log(correctAnswer, answerText);
+    SA.push(answerText);
     if (answerText === correctAnswer && !(questionnum>10)) {
       rumki++;
       console.log("correct");
@@ -140,6 +144,11 @@ function handleAnswerClick(answerText) {
     } else if(!(answerText === correctAnswer) && !(questionnum>10)) {
       console.log("incorrect");
       questionnum++;
+    }
+    if(TestInProgressity == true){
+      localStorage.setItem('SAs', JSON.stringify(SA))
+      localStorage.setItem('questium', questionnum);
+      localStorage.setItem('rumki', rumki);
     }
     if(questionnum>10){
       console.log("The END!");
@@ -150,13 +159,9 @@ function handleAnswerClick(answerText) {
       localStorage.setItem('questium', 0);
       TestInProgressity = false;
     }
-    if(TestInProgressity == true){
-      localStorage.setItem('questium', questionnum);
-      localStorage.setItem('rumki', rumki);
-    }
 }
 
-let firstBlock = null; // Вибраний перший елемент для з'єднання
+let firstBlock = null;
 
 function setupConnectionClicks() {
     const clickableAnswers = [
@@ -167,14 +172,14 @@ function setupConnectionClicks() {
     clickableAnswers.forEach(block => {
       if (block) {
         block.addEventListener('click', (event) => {
-          event.stopPropagation(); // щоб клік тільки на лінії діяв
+          event.stopPropagation(); 
           handleConnectionClick(block);
         });
       }
     });
 }
+//Awim bawe, awim bawe, awim bawe
 function handleConnectionClick(block) {
-  // Якщо ще нічого не вибрано
   if (!firstBlock) {
       if (block.classList.contains('leftones')) {
           firstBlock = block;
@@ -192,15 +197,12 @@ function handleConnectionClick(block) {
 
           counter++;
           if (counter >= 1) {
-            const answer = FstAnswer + "/" + SndAnswer;
-            // Шукаємо, чи вже є запис для FstAnswer
+            const answer = FstAnswer + " - " + SndAnswer;
             let existingIndex = CTCA.findIndex(el => el.startsWith(FstAnswer + "/"));
             if (existingIndex !== -1) {
-              // Якщо знайшли — заміняємо існуючий запис
               CTCA[existingIndex] = answer;
               console.log(`Замінено відповідь на індексі ${existingIndex}:`, answer);
             } else {
-              // Якщо не знайшли — додаємо новий
               CTCA[counter1] = answer;
               counter1++;
               console.log(`Додано нову відповідь:`, answer);
@@ -222,8 +224,6 @@ function handleConnectionClick(block) {
 
 function drawLine(block1, block2) {
     const svg = document.getElementById('svg-lines');
-
-    // Функція безпечного видалення ліній
     function safelyRemoveConnections(block) {
       if (blockConnections.has(block)) {
         const lines = blockConnections.get(block);
@@ -236,7 +236,6 @@ function drawLine(block1, block2) {
       }
     }
 
-    // Перед малюванням нової лінії — прибираємо старі
     safelyRemoveConnections(block1);
     safelyRemoveConnections(block2);
 
@@ -257,11 +256,10 @@ function drawLine(block1, block2) {
     newLine.setAttribute('y2', y2);
     newLine.setAttribute('stroke', 'black');
     newLine.setAttribute('stroke-width', '2');
-    newLine.style.pointerEvents = 'none'; // щоб не заважати клікам
+    newLine.style.pointerEvents = 'none'; 
 
     svg.appendChild(newLine);
 
-    // Записуємо нові лінії
     blockConnections.set(block1, [newLine]);
     blockConnections.set(block2, [newLine]);
 }
