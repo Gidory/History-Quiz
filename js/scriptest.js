@@ -77,14 +77,13 @@ async function loadQuestions() {
   }
 }
 loadQuestions();
-
-function TestProgress(i, b){
-  let a = i+(11*b);
-  if(counter1>3){
-    counter1 = 0;
+function ICTfunc(){
     DOIT(questionnum, testnumber, Correct);
     clearAllLines();
-  }
+}
+function TestProgress(i, b){
+  let a = i+(11*b);
+
   if (!(questionnum>10) && !(questionnum==8)) {
     question.innerText = Questions[a];
     answ1.innerText = Answers[a][0];
@@ -109,8 +108,6 @@ function TestProgress(i, b){
   }
   questnum.innerText = questionnum+1 +"/"+ 11;
   console.log(i);
-  for(let i = 0; i<=3; i++)
-  AC[i] = Answers[a][i];
 }
 function DOIT(i, b, c){
   let a = i+(11*b);
@@ -126,6 +123,7 @@ function DOIT(i, b, c){
       }
     }
     questionnum++;
+    console.log(rumki);
     if(TestInProgressity == true){
       localStorage.setItem('questium', questionnum);
       localStorage.setItem('rumki', rumki);
@@ -194,14 +192,23 @@ function handleConnectionClick(block) {
 
           counter++;
           if (counter >= 1) {
-              CTCA[counter1] = FstAnswer +"/"+ SndAnswer;
-              counter = 0;
+            const answer = FstAnswer + "/" + SndAnswer;
+            // Шукаємо, чи вже є запис для FstAnswer
+            let existingIndex = CTCA.findIndex(el => el.startsWith(FstAnswer + "/"));
+            if (existingIndex !== -1) {
+              // Якщо знайшли — заміняємо існуючий запис
+              CTCA[existingIndex] = answer;
+              console.log(`Замінено відповідь на індексі ${existingIndex}:`, answer);
+            } else {
+              // Якщо не знайшли — додаємо новий
+              CTCA[counter1] = answer;
               counter1++;
-              console.log(CTCA);
-              for(let i=0; i<CTCA.length; i++){
-              if(AC.icludes(CTCA.split('/')[0])){
-
-              }
+              console.log(`Додано нову відповідь:`, answer);
+            }
+            counter = 0;
+            console.log(CTCA);
+            if(CTCA.length>=4){
+              itctv.style.display = "block";
             }
           }
       } else {

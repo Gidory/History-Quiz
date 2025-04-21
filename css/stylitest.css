@@ -64,7 +64,7 @@ body{
     border-radius: 10px;
     height: 20%;
     background-color: rgb(223, 217, 217);
-    font-size: 50px;
+    font-size: 40px;
     display: flex;
     justify-content: center;   /* Горизонтальне центрування */
     align-items: center;       /* Вертикальне центрування */
@@ -109,7 +109,7 @@ body{
     margin-left: 10%;
     border-radius: 10px;
     transition-duration: 1s;
-    font-size: 20px;
+    font-size: 100%;
     text-align: center;
     display: flex;
     justify-content: center;   /* Горизонтальне центрування */
@@ -188,7 +188,7 @@ body{
     left: 60%;
     border-radius: 10px;
     transition-duration: 1s;
-    font-size: 20px;
+    font-size: 100%;
     text-align: center;
     display: flex;
     justify-content: center;   /* Горизонтальне центрування */
@@ -220,10 +220,8 @@ body{
     font-family: Arial Bold;
     padding: 0 15px 5px 15px;
     position: absolute;
-    top: 93%;
     user-select: none;
     cursor: pointer;
-    left: 90%;
     transition-duration: 0.5s;
 }
 .txt:hover{
@@ -233,5 +231,7 @@ body{
     scale: 1.1;
 }
 #ITC{
+    left: 90%;
+    top: 60%;
     display: none;
 }
