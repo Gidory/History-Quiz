@@ -46,10 +46,15 @@ header nav ul {
     transform: translateX(-50%);
     margin: 15px 0 0 0;
     padding: 10px 20px;
+    color: #fff;
 }
 
 header nav ul li {
     display: inline-block;
+}
+
+header nav ul li a {
+    color : #fff;
 }
 
 header nav ul li.active::after{
@@ -111,9 +116,9 @@ header .cat:hover{
     width: 527px;
     padding-top:70px;
     display: flex;
-    flex-direction: column; /* Розташування кнопок вертикально */
-    align-items: center; /* Вирівнювання по центру */
-    gap: 20px; /* Відступ між кнопками */
+    flex-direction: column; 
+    align-items: center; 
+    gap: 20px;
 }
 
 .hero––info h2 {
