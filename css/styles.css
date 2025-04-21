@@ -110,23 +110,23 @@ header .cat:hover{
     margin-left: 10%;
     margin-top: 10%;
     padding-bottom: 20px; 
-    border-bottom: 2px solid rgba(255, 255, 255, 0.5); /* Лінія між секціями */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 .video {
     margin-top: 20px;
     display: flex;
-    flex-direction: column; /* Розташовуємо елементи вертикально */
-    align-items: center; /* Центруємо заголовок і відео по горизонталі */
-    gap: 20px; /* Відстань між заголовком і відео */
+    flex-direction: column; 
+    align-items: center; 
+    gap: 20px; 
 }
 
 .video h1 {
     font-size: 30px;
     font-weight: 800;
     color: #fff;
-    margin-bottom: 10px; /* Відстань між заголовком і відео */
-    text-align: center; /* Центруємо текст заголовка */
+    margin-bottom: 10px; 
+    text-align: center; 
 }
 
 .video iframe, 
@@ -139,12 +139,20 @@ header .cat:hover{
 }
 
 .hero–info {
-    width: 527px;
-    padding-top:70px;
+    max-width: 95%; 
+    margin: 0 auto; 
+    line-height: 1.8; 
+    font-size: 21px; 
+    padding-top: 70px;
     display: flex;
-    flex-direction: column; 
-    align-items: center; 
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
+}
+
+.hero–info p {
+    width: 100%; 
+    text-align: justify;
 }
 
 .hero––info h2 {
@@ -174,7 +182,7 @@ header .cat:hover{
     font-weight: 600;
     font-size: 18px;
     transition: all 500ms ease;
-    width: auto; /* Кнопки будуть мати автоматичну ширину */
+    width: auto; 
     padding: 15px 30px;
     text-align: center;
     font-weight: 600;
@@ -214,6 +222,15 @@ header .cat:hover{
     border-radius: 20px;
     background-color: #4a2c2a;
     padding: 15px;
+}
+
+.description {
+    text-align: center; 
+    margin: 20px auto; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
 }
 
 footer {
@@ -354,4 +371,31 @@ footer .inf2 p {
 
 .hero–info p{
     width: 900px;
+}
+
+.image_blocks {
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
+    flex-wrap: wrap; 
+    margin-top: 20px; 
+}
+
+.image_block {
+    background: linear-gradient(180deg, rgba(20, 10, 5, 1) 0%, rgba(40, 20, 10, 1) 100%); 
+    padding: 15px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.image_block:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+}
+
+.image_block img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 8px; 
 }
