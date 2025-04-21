@@ -108,7 +108,7 @@ header .cat:hover{
 }
 
 .our_info{
-    margin-left: 8%;
+    margin-left: 15%;
     margin-top: 5%;
 }
 
@@ -116,9 +116,16 @@ header .cat:hover{
     margin-bottom: 40px;
 }
 
-.photoArtema{
+.photoArtema, .photoRoman, .photoGleb, .photoDasha {
     width: 300px;
     height: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавний перехід для збільшення та підсвічування */
+}
+
+.photoArtema:hover, .photoRoman:hover, .photoGleb:hover, .photoDasha:hover {
+    transform: scale(1.1); /* Збільшення зображення */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6), 0 0 30px rgba(255, 131, 5, 1); /* Більш яскраве помаранчеве підсвічування */
+    cursor: pointer; /* Зміна курсора на вказівник */
 }
 
 .Artomka h2{
@@ -154,11 +161,6 @@ header .cat:hover{
 .sosial_media img:hover {
     transform: scale(1.2); 
     cursor: pointer;
-}
-
-.photoRoman {
-    width: 300px;
-    height: 400px;
 }
 
 .Romanka h2 {
@@ -200,11 +202,6 @@ font-size: 20px;
     cursor: pointer;
 }
 
-.photoGleb {
-    width: 300px;
-    height: 400px;
-}
-
 .Glebka h2 {
     position: absolute;
     margin-left: 22%;
@@ -240,11 +237,6 @@ font-size: 20px;
     cursor: pointer;
 }
 
-.photoDasha {
-    width: 300px;
-    height: 400px;
-}
-
 .Dashka h2 {
     position: absolute;
     margin-left: 22%;
@@ -264,7 +256,7 @@ font-size: 20px;
 .Dashka .sosial_media { 
     position: absolute; 
     margin-left: 22%;
-    margin-top: 12%;
+    margin-top: 14%;
     display: flex;
     gap: 20px;
 }
@@ -290,6 +282,31 @@ font-size: 20px;
 .svgs:hover {
     transform: scale(1.1); 
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5); 
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: center; /* Вирівнювання кнопок по центру */
+    gap: 40px; /* Відступ між кнопками */
+    margin-top: 40px; /* Відступ зверху */
+}
+
+.navigation-buttons .btn_1, 
+.navigation-buttons .btn_2 {
+    background: #fa8305;
+    color: #fff;
+    border-radius: 50px;
+    padding: 20px 40px; /* Збільшено внутрішні відступи */
+    border: 0;
+    font-size: 20px; /* Збільшено розмір шрифту */
+    font-weight: 700; /* Зроблено текст жирнішим */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.navigation-buttons .btn_1:hover, 
+.navigation-buttons .btn_2:hover {
+    transform: scale(1.15); /* Збільшення при наведенні */
 }
 
 footer {

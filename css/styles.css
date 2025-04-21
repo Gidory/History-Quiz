@@ -313,10 +313,10 @@ footer .inf2 p {
 
 .menu {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-    padding: 0 10%;
+    justify-content: center; /* Вирівнювання кнопок по центру */
+    gap: 20px; /* Відступ між кнопками */
+    margin-top: 40px; /* Відступ зверху */
+    margin-bottom: 20px; /* Відступ знизу */
 }
 
 .menu_buttons {
@@ -327,7 +327,7 @@ footer .inf2 p {
     font-size: 18px;
     padding: 15px 30px;
     border-radius: 50px;
-    background: linear-gradient(90deg, #000 0%, #fa8305 100%);
+    background: #dc7000;
     color: #fff;
     border: 2px solid #fa8305;
     transition: all 300ms ease;
@@ -338,8 +338,6 @@ footer .inf2 p {
 }
 
 .menu_button {
-    display: inline-block;
-    text-align: center;
     text-decoration: none;
     font-weight: 600;
     font-size: 18px;
@@ -349,14 +347,12 @@ footer .inf2 p {
     color: #fff;
     border: 2px solid #fa8305;
     transition: all 300ms ease;
-    margin: 10px; 
 }
 
 .menu_button:hover {
     cursor: pointer;
     transform: scale(1.1);
     background: linear-gradient(90deg, #fa8305 0%, #000 100%);
-   
     border-color: #000;
 }
 
