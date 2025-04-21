@@ -7,51 +7,73 @@
     <link rel="icon" href="img/title.png" type="image/x-icon">
 </head>
 <body>
+    <header>
+        <img src="img/liceum.png" alt="Ліцей" class="logo">
+        <h2 class="header_logo">НЛЖП</h2>
+        <button class="cat" onclick="location.href='https://www.pinterest.com/search/pins/?q=історичні%20меми&rs=typed'">Історичні меми</button>
+        <div>
+            <nav class="nav">
+                <ul>
+                    <li class="active"><a href="index.html">Головна</a></li>
+                    <li><a href="comand_info.html">Наша інформація</a></li>
+                    <li><a href="Intro.html">Тестування</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     <section class="menu_container">
         <div class="side_container left">
             <h2 class="left_info">Матеріали для покращення результату:</h2>
             <div class="image_block">
-                <img src="img/2ww.png" alt="Left Image">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+                    <img src="img/2ww.png" alt="Left Image">
+                </a>
             </div>
             <div class="image_block">
-                <img src="img/afgan.png" alt="Left Image">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+                    <img src="img/afgan.png" alt="Left Image">
+                </a>
             </div>
             <div class="image_block">
-                <img src="img/trigonometria.png" alt="Left Image">
-            </div>
-            <div class="image_block">
-                <img src="img/function.png" alt="Left Image">
-            </div>
-            <div class="image_block">
-                <img src="img/parametr.png" alt="Left Image">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+                    <img src="img/trigonometria.png" alt="Left Image">
+                </a>
             </div>
         </div>
         <div class="main_container">
             <div id="showresult" class="result">Ваш результат: 8/10</div>
-            <div id = 'resultcomm' class="result">Bruh</div>
+            <div id="resultcomm" class="result">Bruh</div>
+            <div class="warning">*Знизу ви можете подивитись на відповіді*</div>
             <div class="buttons">
-                <a href="index.html">На головну</a>
+                <p class="button"><a href="index.html">На головну</a></p>
             </div>
         </div>
         <div class="side_container right">
             <h3 class="right_info">Матеріали для покращення результату:</h3>
             <div class="image_block">
-            <img src="img/2ww.png" alt="Right Image">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+                    <img src="img/2ww.png" alt="Right Image">
+                </a>
             </div>
             <div class="image_block">
-            <img src="img/afgan.png" alt="right_image">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+                    <img src="img/afgan.png" alt="Right Image">
+                </a>
             </div>
             <div class="image_block">
-            <img src="img/trigonometria.png" alt="right_image">
-            </div>
-            <div class="image_block">
-            <img src="img/function.png" alt="right_image">
-            </div>
-            <div class="image_block">
-                <img src="img/parametr.png" alt="Left Image">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+                    <img src="img/trigonometria.png" alt="Right Image">
+                </a>
             </div>
         </div>
     </section>
+    <footer>
+        <h2>Перевірка помилок:</h2>
+        <div class="information" id="answers-container">
+            <!-- Відповіді будуть динамічно додані через JavaScript -->
+        </div>
+        <script src="js/answers.js"></script>
+    </footer>
     <script src="js/changeables.js"></script>
     <script src="js/script.js"></script>
 </body>
