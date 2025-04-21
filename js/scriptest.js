@@ -20,6 +20,7 @@ let testholder1 = document.querySelector("#testholder1");
 let questionnum = parseInt(localStorage.getItem('questium'));
 let testnumber = parseInt(localStorage.getItem('testnumbers'));
 let itctv = document.querySelector("#ITC");
+let AC = [];
 let counter1 = 0;
 let FstAnswer;
 let SndAnswer;
@@ -71,9 +72,6 @@ async function loadQuestions() {
         TestProgress(questionnum, testnumber);
       }
     }, 10);
-    function OPO(){
-      ICTfunc();
-    }
   } catch (error) {
     console.error('You fucked up here:', error);
   }
@@ -111,7 +109,8 @@ function TestProgress(i, b){
   }
   questnum.innerText = questionnum+1 +"/"+ 11;
   console.log(i);
-  
+  for(let i = 0; i<=3; i++)
+  AC[i] = Answers[a][i];
 }
 function DOIT(i, b, c){
   let a = i+(11*b);
@@ -176,32 +175,43 @@ function setupConnectionClicks() {
       }
     });
 }
-
 function handleConnectionClick(block) {
-    counter++;
-    if(block.classList.contains('leftones')){
-      FstAnswer = block.innerText;
-      console.log(FstAnswer);
-    }
-    if(block.classList.contains('rightones')){
-      SndAnswer = block.innerText;
-      console.log(SndAnswer);
-    }
-    if (!firstBlock) {
-      firstBlock = block;
-      block.style.backgroundColor = 'green'; // Підсвітка вибраного
-    } else {
-      drawLine(firstBlock, block);
-      firstBlock.style.backgroundColor = ''; // Повернути стандартний стиль
-      firstBlock = null;
-    }
-    if(counter>=2){
-    CTCA[counter1] = FstAnswer + SndAnswer;  
-    console.log(CTCA);
-    counter = 0;
-    counter1++;
-    }
+  // Якщо ще нічого не вибрано
+  if (!firstBlock) {
+      if (block.classList.contains('leftones')) {
+          firstBlock = block;
+          block.style.backgroundColor = 'green';
+          FstAnswer = block.innerText;
+      } else {
+          console.log("Починати можна тільки з лівого блоку!");
+      }
+  } else {
+      if (block.classList.contains('rightones')) {
+          SndAnswer = block.innerText;
+          drawLine(firstBlock, block);
+          firstBlock.style.backgroundColor = '';
+          firstBlock = null;
+
+          counter++;
+          if (counter >= 1) {
+              CTCA[counter1] = FstAnswer +"/"+ SndAnswer;
+              counter = 0;
+              counter1++;
+              console.log(CTCA);
+              for(let i=0; i<CTCA.length; i++){
+              if(AC.icludes(CTCA.split('/')[0])){
+
+              }
+            }
+          }
+      } else {
+          console.log("З'єднувати можна тільки з правим блоком!");
+          firstBlock.style.backgroundColor = '';
+          firstBlock = null;
+      }
+  }
 }
+
 
 function drawLine(block1, block2) {
     const svg = document.getElementById('svg-lines');
