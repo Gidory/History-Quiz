@@ -204,13 +204,13 @@ body{
     border: 2px solid black;
 }
 #svg-lines {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; /* важливо */
-    z-index: 1000; /* поверх всіх інших блоків */
+    pointer-events: none;
+    z-index: 10;
   }
 .txt{
     background-color: #ddd;

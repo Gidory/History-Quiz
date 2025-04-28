@@ -223,45 +223,46 @@ function handleConnectionClick(block) {
 
 
 function drawLine(block1, block2) {
-    const svg = document.getElementById('svg-lines');
-    function safelyRemoveConnections(block) {
+  const svg = document.getElementById('svg-lines');
+
+  function safelyRemoveConnections(block) {
       if (blockConnections.has(block)) {
-        const lines = blockConnections.get(block);
-        lines.forEach(line => {
-          if (line && svg.contains(line)) {
-            svg.removeChild(line);
-          }
-        });
-        blockConnections.delete(block);
+          const lines = blockConnections.get(block);
+          lines.forEach(line => {
+              if (line && svg.contains(line)) {
+                  svg.removeChild(line);
+              }
+          });
+          blockConnections.delete(block);
       }
-    }
+  }
 
-    safelyRemoveConnections(block1);
-    safelyRemoveConnections(block2);
+  safelyRemoveConnections(block1);
+  safelyRemoveConnections(block2);
 
-    const rect1 = block1.getBoundingClientRect();
-    const rect2 = block2.getBoundingClientRect();
-    const containerRect = document.body.getBoundingClientRect();
+  const rect1 = block1.getBoundingClientRect();
+  const rect2 = block2.getBoundingClientRect();
 
-    const x1 = rect1.left + rect1.width / 2 - containerRect.left;
-    const y1 = rect1.top + rect1.height / 2 - containerRect.top;
+  // Додаємо скрол сторінки
+  const x1 = rect1.left + window.scrollX + rect1.width / 2;
+  const y1 = rect1.top + window.scrollY + rect1.height / 2;
 
-    const x2 = rect2.left + rect2.width / 2 - containerRect.left;
-    const y2 = rect2.top + rect2.height / 2 - containerRect.top;
+  const x2 = rect2.left + window.scrollX + rect2.width / 2;
+  const y2 = rect2.top + window.scrollY + rect2.height / 2;
 
-    const newLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-    newLine.setAttribute('x1', x1);
-    newLine.setAttribute('y1', y1);
-    newLine.setAttribute('x2', x2);
-    newLine.setAttribute('y2', y2);
-    newLine.setAttribute('stroke', 'black');
-    newLine.setAttribute('stroke-width', '2');
-    newLine.style.pointerEvents = 'none'; 
+  const newLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+  newLine.setAttribute('x1', x1);
+  newLine.setAttribute('y1', y1);
+  newLine.setAttribute('x2', x2);
+  newLine.setAttribute('y2', y2);
+  newLine.setAttribute('stroke', 'black');
+  newLine.setAttribute('stroke-width', '2');
+  newLine.style.pointerEvents = 'none';
 
-    svg.appendChild(newLine);
+  svg.appendChild(newLine);
 
-    blockConnections.set(block1, [newLine]);
-    blockConnections.set(block2, [newLine]);
+  blockConnections.set(block1, [newLine]);
+  blockConnections.set(block2, [newLine]);
 }
 
 setupConnectionClicks();
