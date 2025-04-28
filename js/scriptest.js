@@ -243,18 +243,29 @@ function drawLine(block1, block2) {
   const rect1 = block1.getBoundingClientRect();
   const rect2 = block2.getBoundingClientRect();
 
-  // Додаємо скрол сторінки
-  const x1 = rect1.left + window.scrollX + rect1.width / 2;
-  const y1 = rect1.top + window.scrollY + rect1.height / 2;
+  const scrollX = window.scrollX;
+  const scrollY = window.scrollY;
+  const pageWidth = document.body.scrollWidth;
+  const pageHeight = document.body.scrollHeight;
 
-  const x2 = rect2.left + window.scrollX + rect2.width / 2;
-  const y2 = rect2.top + window.scrollY + rect2.height / 2;
+  const absX1 = rect1.left + scrollX + rect1.width / 2;
+  const absY1 = rect1.top + scrollY + rect1.height / 2;
+  const absX2 = rect2.left + scrollX + rect2.width / 2;
+  const absY2 = rect2.top + scrollY + rect2.height / 2;
+
+  // Конвертуємо в відсотки
+  const perX1 = (absX1 / pageWidth) * 100;
+  const perY1 = (absY1 / pageHeight) * 100;
+  const perX2 = (absX2 / pageWidth) * 100;
+  const perY2 = (absY2 / pageHeight) * 100;
 
   const newLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-  newLine.setAttribute('x1', x1);
-  newLine.setAttribute('y1', y1);
-  newLine.setAttribute('x2', x2);
-  newLine.setAttribute('y2', y2);
+
+  // Встановлюємо через відсотки
+  newLine.setAttribute('x1', `${perX1}%`);
+  newLine.setAttribute('y1', `${perY1}%`);
+  newLine.setAttribute('x2', `${perX2}%`);
+  newLine.setAttribute('y2', `${perY2}%`);
   newLine.setAttribute('stroke', 'black');
   newLine.setAttribute('stroke-width', '2');
   newLine.style.pointerEvents = 'none';
@@ -264,6 +275,7 @@ function drawLine(block1, block2) {
   blockConnections.set(block1, [newLine]);
   blockConnections.set(block2, [newLine]);
 }
+
 
 setupConnectionClicks();
 function clearAllLines() {
