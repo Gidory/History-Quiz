@@ -59,4 +59,30 @@ document.addEventListener("DOMContentLoaded", async function() {
     } catch (error) {
         console.error('Error loading questions:', error);
     }
+
+    // Масив мемів (шляхи до файлів)
+    const memes = [
+        "Historikal_mems/mems/1700810889.png",
+        "Historikal_mems/mems/1c.png",
+        "Historikal_mems/mems/images (1).jpg",
+        "Historikal_mems/mems/images.jpg",
+        "Historikal_mems/mems/maxresdefault.jpg",
+        "Historikal_mems/mems/word-image-53.jpeg"
+    ];
+
+    // Випадковий вибір картинки
+    const randomIndex = Math.floor(Math.random() * memes.length);
+    const memeImg = document.createElement("img");
+    memeImg.src = memes[randomIndex];
+    memeImg.alt = "Історичний мем";
+    memeImg.style.maxWidth = "100%";
+    memeImg.style.borderRadius = "10px";
+    memeImg.style.boxShadow = "0 4px 8px rgba(0,0,0,0.2)";
+
+    // Додаємо картинку у блок
+    const memesContainer = document.getElementById("historical_memes");
+    if (memesContainer) {
+        memesContainer.innerHTML = ""; // Очищаємо попередній вміст
+        memesContainer.appendChild(memeImg);
+    }
 });
