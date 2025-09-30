@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         data.correct_answers.forEach(item2 => {
             Correct.push(item2);
         });
-
+        console.log("Loaded Questions:", SAl);
         for(let i = 0; i < 11; i++){
             let a = i + (11 * testnumber);
             let keyda = document.createElement("div");
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", async function() {
                 <h3>${Questions[a]}</h3>
                 <hr>
                 <div>
-                    <p>Your answer: ${SAl[i]}</p>
+                    <p>Your answer: ${"|"+SAl[i]+"|"}</p>
                     <p>Correct answer: ${Correct[a]}</p>
                     <p>${text}</p>
                 </div>

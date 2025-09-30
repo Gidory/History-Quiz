@@ -254,17 +254,20 @@ function drawLine(block1, block2) {
   const absY2 = rect2.top + scrollY + rect2.height / 2;
 
   // Конвертуємо в відсотки
-  const perX1 = (absX1 / pageWidth) * 100;
+  const perX1 = ((absX1 / pageWidth) * 100);
   const perY1 = (absY1 / pageHeight) * 100;
   const perX2 = (absX2 / pageWidth) * 100;
   const perY2 = (absY2 / pageHeight) * 100;
 
   const newLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
 
+  const TperX1 = perX1 + perX1*0.5;
+    const TperX2 = perX2 - perX2*0.165;
+
   // Встановлюємо через відсотки
-  newLine.setAttribute('x1', `${perX1}%`);
+  newLine.setAttribute('x1', `${TperX1}%`);
   newLine.setAttribute('y1', `${perY1}%`);
-  newLine.setAttribute('x2', `${perX2}%`);
+  newLine.setAttribute('x2', `${TperX2}%`);
   newLine.setAttribute('y2', `${perY2}%`);
   newLine.setAttribute('stroke', 'black');
   newLine.setAttribute('stroke-width', '2');
