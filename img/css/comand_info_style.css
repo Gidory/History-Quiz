@@ -1,0 +1,395 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    padding: 0;      
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    font-size: 16px;
+    user-select: none;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(26,14,1,1) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    padding: 40px 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+header .header_logo {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 800;
+    color: #fff;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 15px 0 0 0;
+    padding: 10px 20px;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    font-weight: 400;
+    color: #fff;;
+}
+
+header nav ul li.active::after{
+    content: "";
+    display: block;
+    width: 160px;
+    height: 5px;
+    background: #dc7000;
+    border-radius: 10px;
+    position: relative;
+    top: 5px;
+    left: -15px;
+}
+
+header img {
+    position: absolute;
+    top: 0;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 40px;
+    height: 40px;
+}
+
+header .header_logo {
+    position: absolute;
+    top: 0;
+    margin-top: 28px;
+    margin-left: 80px;
+    width: 50px;
+    color: #fff;
+}
+
+header .cat{
+    position: absolute;
+    top: 0;
+    right: 40px;
+    margin-top: 17px;
+    width: 200px;
+    color: #fff;
+    background-color: #dc7000;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 500ms ease;
+}
+
+header .cat:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.our_info{
+    margin-left: 15%;
+    margin-top: 5%;
+}
+
+.our_info > div {
+    margin-bottom: 40px;
+}
+
+.photoArtema, .photoRoman, .photoGleb, .photoDasha {
+    width: 300px;
+    height: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавний перехід для збільшення та підсвічування */
+}
+
+.photoArtema:hover, .photoRoman:hover, .photoGleb:hover, .photoDasha:hover {
+    transform: scale(1.1); /* Збільшення зображення */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6), 0 0 30px rgba(255, 131, 5, 1); /* Більш яскраве помаранчеве підсвічування */
+    cursor: pointer; /* Зміна курсора на вказівник */
+}
+
+.Artomka h2{
+    position: absolute;
+    margin-left: 22%;
+    margin-top: 2%;
+    font-size: 40px;
+    font-weight: 800;
+    font: uppercase;
+}
+
+.Artomka p{
+    position: absolute;
+    margin-left: 22%;
+    margin-top: 8%;
+    width: 800px;
+}
+
+.sosial_media { 
+    position: absolute; 
+    margin-left: 22%;
+    margin-top: 12%;
+    display: flex;
+    gap: 20px;
+}
+
+.sosial_media img {
+    width: 50px; 
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.sosial_media img:hover {
+    transform: scale(1.2); 
+    cursor: pointer;
+}
+
+.Romanka h2 {
+    position: absolute;
+    margin-left: 22%;
+    margin-top: 2%;
+    font-size: 40px;
+    font-weight: 800;
+    text-transform: uppercase; /* Виправлено на коректний синтаксис */
+}
+
+.Romanka p {
+    position: absolute;
+    margin-left: 22%;
+    margin-top: 8%;
+    width: 800px;
+}
+
+.description {
+font-size: 20px;
+}
+
+.Romanka .sosial_media { 
+    position: absolute; 
+    margin-left: 22%;
+    margin-top: 12%;
+    display: flex;
+    gap: 20px;
+}
+
+.Romanka .sosial_media img {
+    width: 50px; 
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.Romanka .sosial_media img:hover {
+    transform: scale(1.2); 
+    cursor: pointer;
+}
+
+.Glebka h2 {
+    position: absolute;
+    margin-left: 22%;
+    margin-top: 2%;
+    font-size: 40px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.Glebka p {
+    position: absolute;
+    margin-left: 22%;
+    margin-top: 8%;
+    width: 800px;
+}
+
+.Glebka .sosial_media { 
+    position: absolute; 
+    margin-left: 22%;
+    margin-top: 12%;
+    display: flex;
+    gap: 20px;
+}
+
+.Glebka .sosial_media img {
+    width: 50px; 
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.Glebka .sosial_media img:hover {
+    transform: scale(1.2); 
+    cursor: pointer;
+}
+
+.Dashka h2 {
+    position: absolute;
+    margin-left: 22%;
+    margin-top: 2%;
+    font-size: 40px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.Dashka p {
+    position: absolute;
+    margin-left: 22%;
+    margin-top: 8%;
+    width: 800px;
+}
+
+.Dashka .sosial_media { 
+    position: absolute; 
+    margin-left: 22%;
+    margin-top: 14%;
+    display: flex;
+    gap: 20px;
+}
+
+.Dashka .sosial_media img {
+    width: 50px; 
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.Dashka .sosial_media img:hover {
+    transform: scale(1.2); 
+    cursor: pointer;
+}
+
+.svgs {
+    border: 2px solid #fff; 
+    border-radius: 50%; 
+    padding: 5px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.svgs:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5); 
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: center; /* Вирівнювання кнопок по центру */
+    gap: 40px; /* Відступ між кнопками */
+    margin-top: 40px; /* Відступ зверху */
+}
+
+.navigation-buttons .btn_1, 
+.navigation-buttons .btn_2 {
+    background: #fa8305;
+    color: #fff;
+    border-radius: 50px;
+    padding: 20px 40px; /* Збільшено внутрішні відступи */
+    border: 0;
+    font-size: 20px; /* Збільшено розмір шрифту */
+    font-weight: 700; /* Зроблено текст жирнішим */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.navigation-buttons .btn_1:hover, 
+.navigation-buttons .btn_2:hover {
+    transform: scale(1.15); /* Збільшення при наведенні */
+}
+
+footer {
+    margin-top: 10%;
+    border-top: 2px solid rgba(255, 255, 255, 0.5); 
+    padding-top: 20px;
+}
+
+footer h2 {
+    font-size: 35px;
+    font-style: uppercase;
+    font-weight: 800;
+    color: #fff;
+    text-align: center;
+    background-color: #4a2c2a;
+    padding: 15px;
+}
+
+footer .information {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 0 10%;
+}
+
+footer .information img{
+    width: 100px;
+    height: 100px;
+}
+
+footer .inf1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+    width: 250px;
+}
+footer .inf2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+}
+footer .inf3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .inf2 h3 {
+    width: 300px;
+}
+
+footer .inf3 h3 {
+    width: 600px;
+}
+
+footer .inf3 p {
+    width: 450px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+footer .inf1 p {
+    width: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+
+footer .inf2 p {
+    width: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+
+footer .information h3 {
+    text-align: justify; 
+    margin: 0 auto; 
+    font-size: 18px;
+}
